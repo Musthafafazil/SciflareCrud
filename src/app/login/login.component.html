@@ -1,0 +1,27 @@
+<mat-card>
+    <mat-card-title>Login</mat-card-title>
+<mat-card-content>
+<form [formGroup]="logInForm" (ngSubmit)="submit()">
+  <p>
+    <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+      <input type="text" matInput placeholder="Username" formControlName="username">
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="outline">
+        <mat-label>PassWord</mat-label>
+      <input type="password" matInput placeholder="Password" formControlName="password">
+    </mat-form-field>
+  </p>
+
+  <div class="button">
+    <button type="submit" mat-button>Login</button>
+  </div>
+
+  <span *ngIf="error">User Not Exist Please SignUp or Try Another</span>
+
+</form>
+</mat-card-content>
+</mat-card>
